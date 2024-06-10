@@ -1,0 +1,58 @@
+﻿<Window x:Class="ChemistryOntologyGUIApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Chemistry Ontology GUI App" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Add Element">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Element Name:" />
+                    <TextBox x:Name="ElementNameTextBox" />
+                    <TextBlock Text="Element Symbol:" />
+                    <TextBox x:Name="ElementSymbolTextBox" />
+                    <TextBlock Text="Atomic Number:" />
+                    <TextBox x:Name="AtomicNumberTextBox" />
+                    <Button Content="Add Element" Click="AddElement_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Add Compound">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Compound Name:" />
+                    <TextBox x:Name="CompoundNameTextBox" />
+                    <TextBlock Text="Compound Formula:" />
+                    <TextBox x:Name="CompoundFormulaTextBox" />
+                    <TextBlock Text="Element Symbols (comma separated):" />
+                    <TextBox x:Name="CompoundElementsTextBox" />
+                    <Button Content="Add Compound" Click="AddCompound_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Add Reaction">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Reactants (formulas, comma separated):" />
+                    <TextBox x:Name="ReactantsTextBox" />
+                    <TextBlock Text="Products (formulas, comma separated):" />
+                    <TextBox x:Name="ProductsTextBox" />
+                    <Button Content="Add Reaction" Click="AddReaction_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="View Elements">
+                <StackPanel Margin="10">
+                    <ListBox x:Name="ElementsListBox" />
+                    <Button Content="Refresh" Click="ViewElements_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="View Compounds">
+                <StackPanel Margin="10">
+                    <ListBox x:Name="CompoundsListBox" />
+                    <Button Content="Refresh" Click="ViewCompounds_Click" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="View Reactions">
+                <StackPanel Margin="10">
+                    <ListBox x:Name="ReactionsListBox" />
+                    <Button Content="Refresh" Click="ViewReactions_Click" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
